@@ -1,0 +1,264 @@
+@font-face {
+  font-family: neue;
+  src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:neue;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page1 {
+  width: 100%;
+  min-height: 100vh;
+  /* background: #c60414; */
+  position: relative;
+}
+nav {
+  width: 100%;
+
+   background:#faebd7; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+}
+nav #nav-part1 img{
+  width: 9.2vw;
+}
+nav #nav-part2 {
+  display: flex;
+  gap: 32px;
+}
+
+#nav-part2 h4 {
+  border: 1px solid rgb(187, 187, 187);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+}
+#nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  bottom: -100%;
+  left: 0;
+  transition: all ease 0.3s;
+}
+#nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 50px;
+  z-index: -1;
+}
+#nav-part2 h4 a {
+  color: rgb(90, 90, 90);
+  text-decoration: none;
+}
+#nav-part2 h4:hover a {
+  color: rgb(249, 249, 249);
+}
+
+#center {
+  width: 100%;
+  height: 70vh;
+  background-color: #faebd7;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgb(204, 199, 199);
+  padding: 0 2vw 2vw 2vw;
+}
+
+#left h2 {
+  width: 25vw;
+  font-size: 1.7vw;
+  font-weight: 500;
+  font-family: neue;
+  line-height: 1.7vw;
+  word-spacing:-1px;
+}
+#right h1{
+  font-size: 9.5vw;
+  line-height: 7.7vw;
+  text-align: right;
+}
+#video-section video{
+  margin-top:1vw;
+  padding:2vw;
+  width: 100%;
+  border-radius: 50px;
+  position: relative;
+}
+
+#hero-shape{
+ position: absolute;
+ top: 38.5vw;
+ right:0;
+ height: 20vw;
+ background-color:orangered;
+ filter:blur(10px);
+ width:40vw;
+ height: 20vw;
+ border-top-left-radius:50vw ;
+ border-bottom-left-radius:50vw ;
+
+}
+
+#hero-shape1{
+width: 30vw;
+height: 20vw;
+background-color: #fe330a;
+left:10vw;
+position: absolute;
+border-radius: 50vw;
+filter: blur(10px);
+animation-name: myAnimation;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-direction: alternate;
+}
+#hero-shape2{
+  width: 20vw;
+  height: 20vw;
+  background-color: #fe330a;
+  filter:blur(20px);
+  right:0vw;
+  top:-2vw;
+  position: absolute;
+  border-radius: 50vw;
+  animation: myAnimation 4s linear 1s infinite alternate;
+}
+#hero-shape3{
+  width: 10vw;
+  height: 5vw;
+  background-color: #fe330a;
+  filter:blur(10px);
+  right:0vw;
+  top:-4vw;
+  position: absolute;
+  border-radius: 50vw;
+  animation: myAnimation 6s linear 2s infinite alternate;
+}
+
+@keyframes myAnimation {
+  from{
+    transform: translate(-40%,-20%);
+  }to{
+    transform: translateY(-50%,0%);
+  }
+}
+
+#page2{
+  width:100%;
+  min-height: 100vh;
+  /* background: #c60414; */
+}
+#moving-text{
+  /* display: inline-flex; */
+  overflow-x: auto;
+  white-space: nowrap;
+
+}
+#moving-text::-webkit-scrollbar{
+  display:none;
+}
+#content{
+/* display: inline-flex;
+align-items: center; */
+white-space: nowrap;
+display: inline-block;
+animation-name: move;
+animation-duration: 10s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+ 
+}
+#content h1{
+  text-transform:uppercase;
+  font-size: 8.5vw;
+  /* background: yellow; */
+  display: inline-block;
+
+}
+#content #cercel{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #c60414;
+  display: inline-block;
+  margin:1vw;
+  
+}
+
+@keyframes move{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-100%);
+  }
+}
+/* #right{
+  display: flex;
+  flex-direction: column;
+  align-items:end;
+  justify-content:right;
+  ;
+}
+#right h1{
+  font-size: 9.5vw;
+  line-height: 7.8vw;
+} */
+
+/* #nav-part2 h4 {
+  padding: 10px 20px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  font-weight: 500;
+  color:#000;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+  z-index: 999;
+}
+
+#nav-part2 h4::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  transition: all ease 0.3s;
+  z-index: -1;
+}
+
+#nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+  
+}
+
+#nav-part2 h4 a{
+  color:#323232;
+  text-decoration:none;
+}
+#nav-part2 h4:hover a{
+  color:aliceblue;
+} */
