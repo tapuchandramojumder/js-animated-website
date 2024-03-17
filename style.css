@@ -289,16 +289,18 @@ animation-iteration-count: infinite;
 
 #page3{
   width:100%;
-  height:100vh;
+  min-height:100vh;
+  padding:4vw 0;
+  /* background-color: #c60414; */
 
 }
 #page3 .elem{
-  height: 12vh;
+  height: 8vh;
   width: 100%;
   border-bottom:1px solid rgb(233, 215, 199);
   display:flex;
   align-items: center;
-  padding:4vw 2vw;
+  padding:3.5vw 2vw;
   position: relative;
   overflow:hidden;
   z-index: 999;
@@ -324,8 +326,23 @@ animation-iteration-count: infinite;
   top: 0;
   opacity:100%;
   z-index: -1;
+  /* transition: all ease 0.3s; */
 }
 
+#fixed-image{
+  width:24vw;
+  height: 60vh;
+  /* background-color: red; */
+  position:fixed;
+  top:26%;
+  left:50%;
+  z-index:9999;
+  border-radius:20px;
+  display: none;
+  background-size: cover;
+  background-position: center;
+  /* transition: all ease 0.1s; */
+}
 
 
 
